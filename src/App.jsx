@@ -16,7 +16,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-white">
-      {/* Top bar with brand and theme toggle */}
       <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-white/70 backdrop-blur-md dark:bg-slate-950/60">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
           <a href="#home" className="flex items-center gap-2 text-sm font-semibold">

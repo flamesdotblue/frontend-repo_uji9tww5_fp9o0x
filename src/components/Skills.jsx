@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code2, Database, Wrench } from 'lucide-react';
+import { Code2, Database } from 'lucide-react';
 
 const SkillBadge = ({ label }) => (
   <span className="inline-flex items-center justify-center rounded-full bg-slate-900/5 px-3 py-1 text-xs font-medium text-slate-700 ring-1 ring-slate-900/10 dark:bg-white/5 dark:text-slate-200 dark:ring-white/10">
@@ -52,39 +52,19 @@ const Skills = () => {
           <Card
             title="Languages & Core"
             icon={Code2}
-            items={[
-              'Python',
-              'JavaScript',
-              'TypeScript',
-              'SQL',
-              'HTML5',
-              'CSS3',
-            ]}
+            items={['Python', 'JavaScript', 'TypeScript', 'SQL', 'HTML5', 'CSS3']}
             accent="bg-sky-400"
           />
           <Card
             title="Frameworks & Libraries"
             icon={Code2}
-            items={[
-              'React',
-              'Node.js',
-              'Django',
-              'Flask',
-              'Tailwind CSS',
-            ]}
+            items={['React', 'Node.js', 'Django', 'Flask', 'Tailwind CSS']}
             accent="bg-fuchsia-400"
           />
           <Card
             title="Databases & Tools"
             icon={Database}
-            items={[
-              'MongoDB',
-              'PostgreSQL',
-              'AWS',
-              'Power BI',
-              'Git',
-              'Linux',
-            ]}
+            items={['MongoDB', 'PostgreSQL', 'AWS', 'Power BI', 'Git', 'Linux']}
             accent="bg-emerald-400"
           />
         </div>

@@ -12,7 +12,6 @@ const Hero = () => {
         />
       </div>
 
-      {/* soft gradient overlay that doesn't block interaction */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.15),rgba(17,24,39,0.6))]" />
 
       <div className="relative mx-auto flex max-w-6xl flex-col items-center px-6 pt-28 text-center sm:pt-36">
@@ -64,7 +63,6 @@ const Hero = () => {
           </a>
         </motion.div>
 
-        {/* profile photo placeholder */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}

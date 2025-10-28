@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink, Mail, Phone, Linkedin, Send } from 'lucide-react';
 
-const ProjectCard = ({ title, tech, description, achievements }) => (
+const ProjectCard = ({ title, tech, description, achievements, repo, demo }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -32,17 +32,18 @@ const ProjectCard = ({ title, tech, description, achievements }) => (
         ))}
       </div>
       <div className="mt-5 flex items-center gap-3">
-        <a
-          href="#"
-          className="inline-flex items-center gap-2 rounded-lg bg-slate-900/90 px-3 py-2 text-sm font-medium text-white transition hover:bg-slate-900 dark:bg-white/10 dark:hover:bg-white/20"
-        >
-          <Github className="h-4 w-4" />
-          View GitHub Repository
-        </a>
-        <a href="#" className="inline-flex items-center gap-2 text-sm text-sky-600 hover:underline dark:text-sky-400">
-          <ExternalLink className="h-4 w-4" />
-          Live Demo
-        </a>
+        {repo && (
+          <a href={repo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-lg bg-slate-900/90 px-3 py-2 text-sm font-medium text-white transition hover:bg-slate-900 dark:bg-white/10 dark:hover:bg-white/20">
+            <Github className="h-4 w-4" />
+            View GitHub Repository
+          </a>
+        )}
+        {demo && (
+          <a href={demo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm text-sky-600 hover:underline dark:text-sky-400">
+            <ExternalLink className="h-4 w-4" />
+            Live Demo
+          </a>
+        )}
       </div>
     </div>
   </motion.div>
@@ -118,20 +119,26 @@ const Showcase = () => {
           <ProjectCard
             title="Hospital Management System"
             description="End-to-end platform for managing patients, appointments, and records with role-based access."
-            tech={["Django", "PostgreSQL", "Bootstrap", "Docker"]}
-            achievements={["Implemented secure authentication and authorization", "Optimized queries for faster patient lookup"]}
+            tech={['Django', 'PostgreSQL', 'Bootstrap', 'Docker']}
+            achievements={['Implemented secure authentication and authorization', 'Optimized queries for faster patient lookup']}
+            repo="#"
+            demo="#"
           />
           <ProjectCard
             title="GitHub Profile Scraper"
             description="CLI and web tool to fetch and analyze GitHub user data for insights on repos, stars, and tech usage."
-            tech={["Python", "Flask", "Requests", "BeautifulSoup"]}
-            achievements={["Rate-limited scraping with caching", "Interactive charts for language distribution"]}
+            tech={['Python', 'Flask', 'Requests', 'BeautifulSoup']}
+            achievements={['Rate-limited scraping with caching', 'Interactive charts for language distribution']}
+            repo="#"
+            demo="#"
           />
           <ProjectCard
             title="Recommendation System Implementation"
             description="Explored collaborative filtering and content-based methods to generate personalized suggestions."
-            tech={["Python", "Pandas", "Scikit-learn", "Matplotlib"]}
-            achievements={["Evaluated algorithms with precision/recall", "Pluggable pipeline for experimentation"]}
+            tech={['Python', 'Pandas', 'Scikit-learn', 'Matplotlib']}
+            achievements={['Evaluated algorithms with precision/recall', 'Pluggable pipeline for experimentation']}
+            repo="#"
+            demo="#"
           />
 
           <ContactCard />

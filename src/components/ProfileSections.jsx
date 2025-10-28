@@ -25,10 +25,7 @@ const ProfileSections = () => {
             transition={{ duration: 0.6 }}
             className="rounded-2xl border border-slate-200 bg-white/70 p-6 shadow-sm backdrop-blur-md dark:border-slate-800 dark:bg-slate-900/50"
           >
-            <SectionTitle
-              title="About Me"
-              subtitle="Summary"
-            />
+            <SectionTitle title="About Me" subtitle="Summary" />
             <p className="text-slate-700 dark:text-slate-300">
               Entry-level Software Developer skilled in Full Stack Development and Data Analytics. Passionate about building practical, scalable solutions with modern web technologies and deriving insights from data. Interests include Open Source, Cloud, and Algorithms. Based in Belagavi, Karnataka.
             </p>
